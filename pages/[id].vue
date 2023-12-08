@@ -6,7 +6,7 @@ if (route.path == "/") {
 } else {
   checkRoute = route.path.replace("/", "");
 }
-console.log(checkRoute)
+
 </script>
 
 <template>
@@ -67,13 +67,10 @@ export default {
       ],
     };
   },
-  async onMounted() {
-    console.log(this.route.path);
-  },
 };
 </script>
 
-<style scoped>
+<style>
 /*Обнуление*/
 * {
   padding: 0;

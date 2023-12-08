@@ -6,13 +6,10 @@ if (route.path == "/") {
 } else {
   checkRoute = route.path.replace("/", "");
 }
-console.log(checkRoute);
 </script>
 
 <template>
   <div>
- 
-
     <div>
       <main class="intro container--intro">
         <div class="intro__carts">
@@ -68,9 +65,6 @@ export default {
         "сео продвижение сайта на тильде с нуля",
       ],
     };
-  },
-  async onMounted() {
-    console.log(this.route.path);
   },
 };
 </script>
