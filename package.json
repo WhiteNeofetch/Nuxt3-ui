@@ -1,13 +1,14 @@
 {
   "name": "nuxt-app",
   "private": true,
-  "type": "module",
+  
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "start": "nuxt --hostname 127.0.0.2 start"
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",

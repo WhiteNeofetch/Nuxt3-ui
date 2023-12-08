@@ -1,13 +1,16 @@
-
+<script setup lang="ts">
+const route = useRoute();
+let checkRoute;
+if (route.path == "/") {
+  checkRoute = route.path.replace("/", "0");
+} else {
+  checkRoute = route.path.replace("/", "");
+}
+console.log(checkRoute)
+</script>
 
 <template>
   <div>
-    <Head>
-      <Title>{{ titleMeta[checkRoute] }}</Title>
-      <Meta name="description" :content="description" />
-    </Head>
-  </div>
-  <!-- <div>
     <div>
       <main class="intro container--intro">
         <div class="intro__carts">
@@ -36,9 +39,8 @@
           <div class="footer__social"></div>
         </div>
       </footer>
-    </div> -->
-    <NuxtPage/>
-  <!-- </div> -->
+    </div>
+  </div>
 </template>
 
 <script lang="ts">
@@ -66,20 +68,7 @@ export default {
     };
   },
   async onMounted() {
-    //
     console.log(this.route.path);
-
-    //   let id = route.params.id;
-    //  // console.log(id)
-    //   if (!id) {
-    //     this.title = " в санкт-петербурге.спб.питер";
-    //   } else {
-    //     const titleMeta = this.titleMeta[id];
-    //     this.title = titleMeta + " в санкт-петербурге.спб.питер";
-    //   }
-
-    //   this.description =
-    //     "Веб-студия spb-site.ru предлагает создание сайтов на тильде в городе Санкт-Петербурге, доступных для обладателей небольших бюджетов. Мы знаем как сделать качественный сайт, с чистым кодом, хорошим отношением поисковых систем, надежной административной системой, красивым дизайном и удобством для посетителей сайта. И все это мы делаем по весьма демократичным ценам. ";
   },
 };
 </script>
